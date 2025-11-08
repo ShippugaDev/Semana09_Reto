@@ -162,29 +162,30 @@ if ((diametro > 1.4 && grosor < 0.4) || (diametro > 0.8 && diametro <= 1.4 && gr
 
 /*Reto 10 */
 
-/*
+
 console.info("¡Bienvenido a nuestra heladería!")
 let topping = prompt("¿Desea agregar un topping a su helado? (si/no)").toLowerCase()
+let precioHelado = 50;
 if (topping == "si") {
     let tipoTopping = prompt("Ingrese el tipo de topping que desea (oreo, kitkat, brownie):").toLowerCase()
     switch (tipoTopping) {
         case "oreo":
-            console.log("El topping de oreo cuesta S/.10")
+            console.log(`El topping de oreo cuesta S/. ${precioHelado + 10}`)
             break
         case "kitkat":
-            console.log("El topping de kitkat cuesta S/.15")
+            console.log(`El topping de kitkat cuesta S/.${precioHelado + 15}`)
             break
         case "brownie":
-            console.log("El topping de brownie cuesta S/.20")
+            console.log(`El topping de brownie cuesta S/.${precioHelado + 20}`)
             break
         default:
             console.log("No tenemos este topping, lo sentimos")
             break
     }
 } else if (topping == "no") {
-    console.log("El helado sin topping cuesta S/.5")
+    console.log(`El helado sin topping cuesta S/${precioHelado}`)
 }
-*/
+
 
 /*Reto 11 */
 
