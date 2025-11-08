@@ -163,6 +163,7 @@ if ((diametro > 1.4 && grosor < 0.4) || (diametro > 0.8 && diametro <= 1.4 && gr
 /*Reto 10 */
 
 
+/*
 console.info("¡Bienvenido a nuestra heladería!")
 let topping = prompt("¿Desea agregar un topping a su helado? (si/no)").toLowerCase()
 let precioHelado = 50;
@@ -185,9 +186,11 @@ if (topping == "si") {
 } else if (topping == "no") {
     console.log(`El helado sin topping cuesta S/${precioHelado}`)
 }
+*/
 
 
 /*Reto 11 */
+
 
 /*
 console.info("¡Bienvenido a nuestro portal educativo!")
@@ -198,79 +201,68 @@ switch (nivel) {
     case "course":
         total = 4999;
         console.log(`El costo total de su nivel educativo es: S/.${total}`);
-        switch (tipoBeca) {
-            case "facebook":
-                total = total * 0.8;
-                console.log(`El costo total con la beca de Facebook es: S/.${total}`);
-                console.log(`El costo total con la beca de Facebook anual es: S/.${total * 2}`);
-                break;
-            case "google":
-                total = total * 0.85;
-                console.log(`El costo total con la beca de Google es: S/.${total}`);
-                console.log(`El costo total con la beca de Google anual es: S/.${total * 2}`);
-                break;
-            case "jesua":
-                total = total * 0.5;
-                console.log(`El costo total con la beca de Jesua es: S/.${total}`);
-                console.log(`El costo total con la beca de Jesua anual es: S/.${total * 2}`);
-                break;
-            default:
-                console.log("Tipo de beca no válido o no tiene beca.");
-                console.log(`El costo total sin beca es: S/.${total}`);
-                console.log(`El costo total sin beca anual es: S/.${total * 2}`);
-                break;
+        
+        if (tipoBeca == "facebook") {
+            total = total * 0.8;
+            console.log(`El costo total con la beca de Facebook es: S/.${total}`);
+            console.log(`El costo total con la beca de Facebook anual es: S/.${total * 2}`);
+        } else if (tipoBeca == "google") {
+            total = total * 0.85;
+            console.log(`El costo total con la beca de Google es: S/.${total}`);
+            console.log(`El costo total con la beca de Google anual es: S/.${total * 2}`);
+        } else if (tipo == "jesua") {
+            total = total * 0.5;
+            console.log(`El costo total con la beca de Jesua es: S/.${total}`);
+            console.log(`El costo total con la beca de Jesua anual es: S/.${total * 2}`);
+        } else {
+            console.log("Tipo de beca no válido o no tiene beca.");
+            console.log(`El costo total sin beca es: S/.${total}`);
+            console.log(`El costo total sin beca anual es: S/.${total * 2}`);
         }
         break;
     case "carrera":
         total = 3999;
         console.log(`El costo total de su nivel educativo es: S/.${total}`);
-        switch (tipoBeca) {
-            case "facebook":
-                total = total * 0.8;
-                console.log(`El costo total con la beca de Facebook es: S/.${total}`);
-                console.log(`El costo total con la beca de Facebook anual  es: S/.${total * 6}`);
-                break;
-            case "google":
-                total = total * 0.85;
-                console.log(`El costo total con la beca de Google es: S/.${total}`);
-                console.log(`El costo total con la beca de Google anual es: S/.${total * 6}`);
-                break;
-            case "jesua":
-                total = total * 0.5;
-                console.log(`El costo total con la beca de Jesua es: S/.${total}`);
-                console.log(`El costo total con la beca de Jesua anual es: S/.${total * 6}`);
-                break;
-            default:
-                console.log("Tipo de beca no válido o no tiene beca.");
-                console.log(`El costo total sin beca es: S/.${total}`);
-                console.log(`El costo total sin beca anual es: S/.${total * 6}`);
-                break;
+       
+        if (tipoBeca == "facebook") {
+            total = total * 0.8;
+            console.log(`El costo total con la beca de Facebook es: S/.${total}`);
+            console.log(`El costo total con la beca de Facebook anual es: S/.${total * 6}`);
+        } else if (tipoBeca == "google") {
+            total = total * 0.85;
+            console.log(`El costo total con la beca de Google es: S/.${total}`);
+            console.log(`El costo total con la beca de Google anual es: S/.${total * 6}`);
+        } else if (tipo == "jesua") {
+            total = total * 0.5;
+            console.log(`El costo total con la beca de Jesua es: S/.${total}`);
+            console.log(`El costo total con la beca de Jesua anual es: S/.${total * 6}`);
+        } else {
+            console.log("Tipo de beca no válido o no tiene beca.");
+            console.log(`El costo total sin beca es: S/.${total}`);
+            console.log(`El costo total sin beca anual es: S/.${total * 6}`);
         }
+
         break;
     case "master":
         total = 2999;
         console.log(`El costo total de su nivel educativo es: S/.${total}`);
-        switch (tipoBeca) {
-            case "facebook":
-                total = total * 0.8;
-                console.log(`El costo total con la beca de Facebook es: S/.${total}`);
-                console.log(`El costo total con la beca de Facebook anual es: S/.${total * 12}`);
-                break;
-            case "google":
-                total = total * 0.85;
-                console.log(`El costo total con la beca de Google es: S/.${total}`);
-                console.log(`El costo total con la beca de Google anual es: S/.${total * 12}`);
-                break;
-            case "jesua":
-                total = total * 0.5;
-                console.log(`El costo total con la beca de Jesua es: S/.${total}`);
-                console.log(`El costo total con la beca de Jesua anual es: S/.${total * 12}`);
-                break;
-            default:
-                console.log("Tipo de beca no válido o no tiene beca.");
-                console.log(`El costo total sin beca es: S/.${total}`);
-                console.log(`El costo total sin beca anual es: S/.${total * 12}`);
-                break;
+        
+        if (tipoBeca == "facebook") {
+            total = total * 0.8;
+            console.log(`El costo total con la beca de Facebook es: S/.${total}`);
+            console.log(`El costo total con la beca de Facebook anual es: S/.${total * 12}`);
+        } else if (tipoBeca == "google") {
+            total = total * 0.85;
+            console.log(`El costo total con la beca de Google es: S/.${total}`);
+            console.log(`El costo total con la beca de Google anual es: S/.${total * 12}`);
+        } else if (tipo == "jesua") {
+            total = total * 0.5;
+            console.log(`El costo total con la beca de Jesua es: S/.${total}`);
+            console.log(`El costo total con la beca de Jesua anual es: S/.${total * 12}`);
+        } else {
+            console.log("Tipo de beca no válido o no tiene beca.");
+            console.log(`El costo total sin beca es: S/.${total}`);
+            console.log(`El costo total sin beca anual es: S/.${total * 12}`);
         }
         break;
     default:
@@ -278,6 +270,7 @@ switch (nivel) {
         break;
 }
 */
+
 
 
 
